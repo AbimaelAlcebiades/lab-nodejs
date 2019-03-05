@@ -1,0 +1,23 @@
+$ var booksPromise = new Promise((resolve, reject) => {
+   setTimeout(function() {
+       resolve([
+           {
+               description: "Home",
+               link: '/'
+           },
+           {
+               description: "Listagem de livros",
+               link: '/books'
+           },
+           {
+               description: "Formulário de edição de livros",
+               link: '/books/form/'
+           }
+       ]);
+   }, 1000);
+});
+
+<await(books from booksPromise)>
+    <div>Páginas:</div>
+    <div for (book in books)><a href="${book.link}">${book.description}</a></div>
+</await>
