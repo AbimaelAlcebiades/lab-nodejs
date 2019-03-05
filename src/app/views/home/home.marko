@@ -1,0 +1,24 @@
+<!-- home.marko -->
+
+<include('./layout.marko')>
+   <@cabecalho>
+       <h1>Casa do Código - Home</h1>
+   </@cabecalho>
+</include>
+
+$ var booksPromise = new Promise((resolve, reject) => {
+   setTimeout(function() {
+       resolve([
+           {
+               titulo: 'Cangaceiro Node'
+           },
+           {
+               titulo: 'Node na prática'
+           }
+       ]);
+   }, 1000);
+});
+
+<await(books from booksPromise)>
+   <div for (book in books)>Título: ${book.titulo}</div>
+</await>
