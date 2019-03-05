@@ -1,0 +1,22 @@
+{
+  "name": "lab-node-js-v2",
+  "version": "1.0.0",
+  "description": "Testes com nodejs, curso alura",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbimaelAlcebiades/lab-nodejs-v2.git"
+  },
+  "author": "Abimael Alcebíades",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AbimaelAlcebiades/lab-nodejs-v2/issues"
+  },
+  "homepage": "https://github.com/AbimaelAlcebiades/lab-nodejs-v2#readme",
+  "dependencies": {
+    "express": "4.16.3"
+  }
+}
