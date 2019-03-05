@@ -27,9 +27,27 @@ class BookDao {
                     (?, ?, ?)`,
                 [book.titulo, book.preco, book.descricao],
                 (error) => {
-                    if(error){
+                    if (error) {
                         console.log(error);
                         return reject('Não foi possível adicionar o livro!');
+                    }
+                    resolve();
+                }
+            )
+        });
+    }
+
+    remove(bookId) {
+        return new Promise((resolve, reject) => {
+            this._db.run(
+                `DELETE FROM
+                    livros
+                WHERE
+                    id = ${bookId}`,
+                (error) => {
+                    if (error) {
+                        console.log(error);
+                        return reject('Não foi possível remover o livro!');
                     }
                     resolve();
                 }

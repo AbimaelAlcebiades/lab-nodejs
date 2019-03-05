@@ -61,6 +61,13 @@ module.exports = (app) => {
             .then(res.redirect('/books'))
             .catch(error => console.log(error));
     });
+
+    app.delete('/books/:id', function (req, res) {
+        const id = req.params.id;
+        bookDao.remove(id)
+            .then(() => { res.status(200).end() })
+            .catch(error => { console.log(error) });
+    });
 }
 
 
