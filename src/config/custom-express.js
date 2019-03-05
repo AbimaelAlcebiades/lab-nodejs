@@ -7,6 +7,12 @@ const bodyParser = require('body-parser');
 const app = express();
 
 app.use(
+    '/static',
+    express.static('src/app/public')
+);
+
+app.use(
+    '*',
     bodyParser.urlencoded({ extended: true })
 );
 
