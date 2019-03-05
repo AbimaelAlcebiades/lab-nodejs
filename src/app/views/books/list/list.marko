@@ -9,10 +9,14 @@
             <tr>
                 <td>ID</td>
                 <td>Título</td>
+                <td>Preço</td>
+                <td>Descrição</td>
             </tr>
-                <tr for (livro in data.books)>
-                <td>${livro.id}</td>
-                <td>${livro.title}</td>
+                <tr for (book in data.books)>
+                <td>${book.id}</td>
+                <td>${book.titulo}</td>
+                <td>${book.preco}</td>
+                <td>${book.descricao}</td>
             </tr>
         </table> 
     </body> 

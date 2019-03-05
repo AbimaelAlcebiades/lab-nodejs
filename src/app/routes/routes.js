@@ -55,6 +55,12 @@ module.exports = (app) => {
             require('../views/books/form/form.marko')
         );
     });
+
+    app.post('/books', function (req, res) {
+        bookDao.add(req.body)
+            .then(res.redirect('/books'))
+            .catch(error => console.log(error));
+    });
 }
 
 
