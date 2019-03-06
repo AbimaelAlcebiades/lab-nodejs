@@ -1,0 +1,36 @@
+{
+    "editor.multiCursorModifier": "ctrlCmd",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "todohighlight.keywords": [{
+        "text": "###################### TESTE - REMOVER ######################",
+        "color": "black",
+        "border": "1px solid yellow",
+        "borderRadius": "2px",
+        "backgroundColor": "red"
+    }],
+    "git.ignoreMissingGitWarning": true,
+    "extensions.ignoreRecommendations": false,
+    "window.zoomLevel": 0,
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.activeBackground": "#999"
+    },
+    "git.autofetch": true,
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "block",
+    "editor.wordWrapColumn": 120,
+    "editor.renderLineHighlight": "all",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "breadcrumbs.enabled": true,
+    "search.location": "sidebar",
+    "workbench.sideBar.location": "left",
+    "window.menuBarVisibility": "default",
+    "editor.renderControlCharacters": false,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.autoIndent": false,
+    "jshint.lintHTML": true
+}
