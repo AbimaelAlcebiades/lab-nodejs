@@ -7,7 +7,7 @@ module.exports = (app) => {
     app.get('/', function (req, res) {
         res.marko(
             require('../views/home/home.marko')
-        )
+        );
     });
 
     app.get('/books', function (req, res) {
@@ -30,24 +30,10 @@ module.exports = (app) => {
         });
     });
 
-    app.get('/books', function (req, res) {
-
-        bookDao.list()
-            .then(books => res.marko(
-                require('../views/books/list/list.marko'),
-                {
-                    books: books
-                }
-            )).catch(error => console.log(error));
-
-        bookDao.list(function (error, results) {
-            res.marko(
-                require('../views/books/list/list.marko'),
-                {
-                    books: results
-                }
-            );
-        });
+    app.post('/books', function (req, res) {
+        bookDao.add(req.body)
+            .then(res.redirect('/books'))
+            .catch(error => console.log(error));
     });
 
     app.get('/books/form', function (req, res) {
@@ -56,11 +42,6 @@ module.exports = (app) => {
         );
     });
 
-    app.post('/books', function (req, res) {
-        bookDao.add(req.body)
-            .then(res.redirect('/books'))
-            .catch(error => console.log(error));
-    });
 
     app.delete('/books/:id', function (req, res) {
         const id = req.params.id;
