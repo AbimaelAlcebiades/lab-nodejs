@@ -1,5 +1,5 @@
 const app = require('./src/config/custom-express');
-const hostName = 'localhost';
+const hostName = "localhost";
 const port = 3000;
 
 app.listen(port, hostName,  function(){
