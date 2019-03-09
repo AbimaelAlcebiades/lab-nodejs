@@ -16,7 +16,17 @@ INSERT INTO usuarios (
     nome_completo, 
     email,
     senha
-) SELECT 'Gabriel Leite', 'gabriel@alura.com.br', '123' WHERE NOT EXISTS (SELECT * FROM usuarios WHERE email = 'gabriel@alura.com.br')
+) SELECT 
+    'Abimael Alcebíades', 'abimael@teste.com.br', '123'
+  WHERE 
+    NOT EXISTS (
+        SELECT 
+            *
+        FROM 
+            usuarios
+        WHERE 
+            email = 'abimael@teste.com.br'
+    )
 `;
 
 const LIVROS_SCHEMA = 
@@ -56,8 +66,7 @@ bd.serialize(() => {
     bd.run(INSERIR_LIVRO_2);
 
     bd.each("SELECT * FROM usuarios", (err, usuario) => {
-        console.log('Usuario: ');
-        console.log(usuario);
+        console.log('Usuários: ', `user: ${usuario.email} - password: ${usuario.senha}`);
     });
 });
 
