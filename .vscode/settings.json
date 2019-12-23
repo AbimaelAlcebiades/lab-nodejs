@@ -2,12 +2,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "git.ignoreMissingGitWarning": true,
-    "extensions.ignoreRecommendations": false,
-    "window.zoomLevel": 0,
-    "workbench.colorCustomizations": {
-        "editorIndentGuide.activeBackground": "#999"
-    },
-    "git.autofetch": true,
     "editor.renderWhitespace": "all",
     "editor.cursorStyle": "block",
     "editor.wordWrapColumn": 120,
@@ -16,11 +10,7 @@
         80,
         120
     ],
-    "workbench.activityBar.visible": true,
-    "workbench.statusBar.visible": true,
     "breadcrumbs.enabled": true,
-    "search.location": "sidebar",
-    "workbench.sideBar.location": "left",
-    "editor.renderControlCharacters": false,
+    "editor.renderControlCharacters": true,
     "editor.cursorSmoothCaretAnimation": true,
 }
