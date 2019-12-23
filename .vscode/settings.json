@@ -31,6 +31,5 @@
     "window.menuBarVisibility": "default",
     "editor.renderControlCharacters": false,
     "editor.cursorSmoothCaretAnimation": true,
-    "editor.autoIndent": false,
     "jshint.lintHTML": true
 }
