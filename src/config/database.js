@@ -16,17 +16,7 @@ INSERT INTO usuarios (
     nome_completo, 
     email,
     senha
-) SELECT 
-    'Abimael Alcebíades', 'abimael@teste.com.br', '123'
-  WHERE 
-    NOT EXISTS (
-        SELECT 
-            *
-        FROM 
-            usuarios
-        WHERE 
-            email = 'abimael@teste.com.br'
-    )
+) SELECT 'Gabriel Leite', 'gabriel@alura.com.br', '123' WHERE NOT EXISTS (SELECT * FROM usuarios WHERE email = 'gabriel@alura.com.br')
 `;
 
 const LIVROS_SCHEMA = 
@@ -35,7 +25,8 @@ CREATE TABLE IF NOT EXISTS livros (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     titulo TEXT NOT NULL, 
     preco REAL NOT NULL,
-    descricao TEXT DEFAULT ('') NOT NULL
+    descricao TEXT DEFAULT ('') NOT NULL, 
+    url_capa TEXT
 )
 `;
 
@@ -66,7 +57,8 @@ bd.serialize(() => {
     bd.run(INSERIR_LIVRO_2);
 
     bd.each("SELECT * FROM usuarios", (err, usuario) => {
-        console.log('Usuários: ', `user: ${usuario.email} - password: ${usuario.senha}`);
+        console.log('Usuario: ');
+        console.log(usuario);
     });
 });
 
