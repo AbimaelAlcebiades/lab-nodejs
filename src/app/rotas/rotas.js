@@ -14,7 +14,7 @@ module.exports = (app) => {
 
     app.get(bookRoutes.bookForm, bookController.form());
 
-    app.get('/livros/form/:id', bookController.edit());
+    app.get(bookRoutes.bookFormEdit, bookController.edit());
 
     app.post(bookRoutes.books, [
         check('titulo').isLength({ min: 5 }).withMessage("O título precisa ter no minímo 5 caractéres"),
@@ -23,5 +23,5 @@ module.exports = (app) => {
 
     app.put(bookRoutes.books, bookController.update());
 
-    app.delete('/livros/:id', bookController.delete());
+    app.delete(bookRoutes.booksDelete, bookController.delete());
 };
