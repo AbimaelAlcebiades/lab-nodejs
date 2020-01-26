@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const routes = require('../app/routes/routes');
 
 app.use('/estatico', express.static('src/app/public'));
 
@@ -20,8 +21,7 @@ app.use(methodOverride(function (req, res) {
     }
 }));
 
-const rotas = require('../app/rotas/rotas');
-rotas(app);
+routes(app);
 
 app.use((req, res, next) => {
     return res.status(404).marko(
