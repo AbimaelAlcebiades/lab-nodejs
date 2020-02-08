@@ -1,14 +1,16 @@
 # lab-nodejs-v2
-Testes com o curso(reformulado) de node da Alura
+Testes com o curso de Node.js da Alura
 
-Execute no terminal: 
+Na raiz do projeto, execute o comando no terminal: 
 
-__npm install__
-
+```bash
+npm install
+```
 
 e depois...
 
+```bash
+npm start
+```
 
-__npm start__
-
-Acesse em um navegador o endereço http://localhost:3000
+Acesse em um navegador no endereço http://localhost:3000
